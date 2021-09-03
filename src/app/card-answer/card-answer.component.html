@@ -1,0 +1,42 @@
+<div class="wrapper">
+    <div class="main_center">
+            <div class="container_p_3">
+                <div class="box_p_2">
+                    <div class="small_box_t_and_f">
+                        <button type="button" class="button_t_and_folse">
+                            <img src="assets/img/icon_false_1.png">
+                            <h3>Səhvdir</h3>
+                        </button>
+                    </div>
+                    <div class="center_container clearfix">
+                        <div class="header">
+                            <h4 *ngIf="!flag; else untemp" >Səhvdir</h4>
+                            
+                            <ng-template #untemp>
+                                <h3>Düzdür</h3>
+                            </ng-template>
+
+                        </div>
+                        <div class="center_box_text clearfix">
+                            <span>{{ item.answer }}</span>
+                        </div>
+                        <div class="link_p_3 clearfix">
+                            <a *ngIf="checkEnd(); else temp" routerLink="/cards" class="acustom" (click)="counterChange()">Növbəti sual</a>
+                            <ng-template #temp>
+                                <a routerLink="/finisPage" class="acustom">Nəticə</a>
+                            </ng-template>
+                        </div>
+                        <div class="row_number">{{ item.id }}/10</div>
+
+                    </div>
+                    <div class="small_box_t_and_f">
+                        <button type="button" class="button_t_and_folse">
+                            <img src="assets/img/icon_true.png">
+                            <h3>Düzdür</h3>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+</div>
