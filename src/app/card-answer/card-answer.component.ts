@@ -11,6 +11,7 @@ export class CardAnswerComponent implements OnInit {
 
    item:any 
    flag:boolean = false;
+   dispNone:boolean=false;
 
   constructor( private route: ActivatedRoute, private router: Router, private objs: GetQuestionsService) { 
     this.objs.ifCounter();
@@ -34,7 +35,7 @@ export class CardAnswerComponent implements OnInit {
     }
  }
   counterChange(){
-      this.objs.checkCounter();
+    this.objs.checkCounter(); 
   }
 
   ngOnInit(){
@@ -45,4 +46,6 @@ export class CardAnswerComponent implements OnInit {
     }
   }
 
+   ngDoCheck() {
+   }
 }

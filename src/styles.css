@@ -45,6 +45,7 @@
 }
 
 
+
 *{
     padding: 0;
     margin: 0;
@@ -56,8 +57,6 @@ body{
     background-color: #F8F9FA;
 
 }
-
-main { position: relative;}
 
 .clearfix::after{
     content: "";
@@ -71,11 +70,10 @@ main { position: relative;}
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
 
 }
 .main_center{
-    
+    margin: 0px auto;
     width: 100%;
     max-width: 1000px;
     background-color: #FFFFFF;
@@ -127,12 +125,12 @@ main { position: relative;}
     font-style: normal;
 }
 
-.left_box div{
+.left_box .start{
     width: 100%;
 
 }
 
-.left_box div a{
+.left_box .start a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -200,7 +198,11 @@ main { position: relative;}
     border: none;
     cursor: pointer;
 }
-
+.button_t_and_folse img {
+    display: block;
+    width: 69px;
+    height: 69px;
+}
 .small_box_t_and_f h3{
     color: #0E1013;
     font-size: 16px;
@@ -235,9 +237,8 @@ main { position: relative;}
 }
 
 .eagle{
-    /* margin-top: 94px;
-    margin-bottom: 38px; */
-    margin: 20px 0;
+    margin-top: 94px;
+    margin-bottom: 38px;
 }
 
 .row_number{
@@ -277,7 +278,8 @@ main { position: relative;}
 .center_box_text{
     width: 100%;
     word-break: break-word;
-    margin: 0px auto 60px auto;
+    min-height: 200px;
+    padding-bottom: 30px;
 }
 
 .center_box_text span{
@@ -292,8 +294,7 @@ main { position: relative;}
 .link_p_3{
     width: 100%;
     min-height: 51px;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    margin: 5px auto 20px auto;
 }
 
 .link_p_3 a{
@@ -301,8 +302,9 @@ main { position: relative;}
     background-color: #E00034;
     border-radius: 5px;
     color: #FFFFFF;
-    padding: 16px 105px;
+    padding: 16px 16px;
     display: block;
+    text-align: center;
 }
 
 .header h4{
@@ -327,11 +329,12 @@ main { position: relative;}
     background-color: #E00034;
     width: 40%;
     max-width: 360px;
-    padding: 100px 30px;
+    padding: 30px 30px;
 }
 
 .rating{
     width: 100%;
+    max-width: 300px;
     margin-bottom: 30px;
 }
 .top_box{
@@ -467,6 +470,7 @@ main { position: relative;}
     font-weight: normal;
     font-style: normal;
     margin-right: 6px;
+    font-weight: 600;
 }
 
 .right_box_p_5{
@@ -497,6 +501,9 @@ main { position: relative;}
     font-weight: normal;
     font-style: normal;
 }
+.b_t_5_box{
+    width: 100%;
+}
 
 .button_5{
     width: 100%;
@@ -513,4 +520,372 @@ main { position: relative;}
     box-shadow: -25px 20px 15px #E0003433;
     border-radius: 5px;
     margin-left: 20px;
+}
+
+.spinner{
+
+    border: 16px solid silver;
+    border-top: 16px solid #E00034;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 700ms linear infinite;
+    top:50%;
+    left:50%;
+    position: absolute; 
+}
+@keyframes spin {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
+}
+
+/*Resposiv*/
+
+@media screen and (min-width: 561px) and (max-width: 980px){
+
+    .container_two{
+        position: relative;
+        padding: 40px 30px 110px 30px;
+    }
+    .center_small_box{
+        width: 100%;
+    }
+    .box_p_2{
+        flex-wrap: wrap;
+    }
+    .small_box_t_and_f{
+        width: 50%;
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .small_box_t_and_f.left_r{
+        bottom: 20px;
+        left: 0px;
+        padding: 10px;
+    }
+    .small_box_t_and_f.right_r{
+        bottom: 20px;
+        right: 0px;
+        padding: 10px;
+    }
+
+    .container_two .small_box_t_and_f.left_r{
+        bottom: -107px;
+    }
+    .container_two .small_box_t_and_f.right_r{
+        bottom: -107px;
+    }
+
+    .center_small_box{
+        padding: 25px;
+    }
+    .box_p_2{
+        position: relative;
+    }
+    /*.box_p_2>.small_box_t_and_f.left_r{*/
+    /*    bottom: 15px;*/
+    /*    left: 10px;*/
+    /*}*/
+    /*.box_p_2>.small_box_t_and_f.right_r{*/
+    /*    bottom: 15px;*/
+    /*    right: 10px;*/
+    /*}*/
+    .center_container{
+        max-width:100%;
+        width: 100%;
+        padding: 140px 30px;
+    }
+    .link_p_3{
+        width: 40%;
+    }
+    .link_p_3 a{
+        text-align: center;
+        padding: 10px 12px;
+    }
+    .header h3{
+        text-align: center;
+    }
+
+    .container_p_3{
+        width: 100%;
+        padding: 59px 16px 74px 16px;
+    }
+    .center_box_text{
+        text-align: center;
+        min-height: 100px;
+    }
+
+
+    .wrapper{
+        /* height: auto; */
+    }
+
+    .main_center{
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .container_one{
+        flex-wrap: wrap;
+        position: relative;
+        height: 100%;
+    }
+    .left_box{
+        width: 100%;
+    }
+
+    .right_box{
+        width: 70%;
+        margin: 0 auto;
+    }
+    .bakcell_logo{
+        width: 30%;
+        position: absolute;
+        top: 39px;
+        left: 29px;
+    }
+    .bakcell_logo img {
+        float: none;
+    }
+
+    .right_r{
+        display: flex;
+        justify-content: flex-start;
+
+    }
+    .left_r{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header{
+        text-align: center;
+    }
+    .container_p_5{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .left_box_p_5{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .right_box_p_5{
+        width: 100%;
+        padding: 30px;
+    }
+
+    .button_5{
+        text-align: center;
+        padding: 16px 0px;
+        margin-left:0px;
+    }
+
+    .r_b_p_5_a{
+        padding-bottom: 20px;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+
+    .b_t_5_box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 560px){
+
+    .container_two{
+        position: relative;
+        padding: 40px 30px 110px 30px;
+    }
+    .center_small_box{
+        width: 100%;
+    }
+    .box_p_2{
+        flex-wrap: wrap;
+    }
+    .small_box_t_and_f{
+        width: 50%;
+        position: absolute;
+        bottom: 20px;
+    }
+
+    .small_box_t_and_f.left_r{
+        bottom: 20px;
+        left: 0px;
+        padding: 10px;
+    }
+    .small_box_t_and_f.right_r{
+        bottom: 20px;
+        right: 0px;
+        padding: 10px;
+    }
+
+    .container_two .small_box_t_and_f.left_r{
+        bottom: -107px;
+    }
+    .container_two .small_box_t_and_f.right_r{
+        bottom: -107px;
+    }
+
+
+    .eagle{
+        margin-top: 45px;
+    }
+
+    .center_small_box{
+        padding: 25px;
+    }
+    .box_p_2{
+        position: relative;
+    }
+    /*.box_p_2>.small_box_t_and_f.left_r{*/
+    /*    bottom: 15px;*/
+    /*    left: 0;*/
+    /*}*/
+    /*.box_p_2>.small_box_t_and_f.right_r{*/
+    /*    bottom: 15px;*/
+    /*    right: 0;*/
+    /*}*/
+    .center_container{
+        max-width:100%;
+        width: 100%;
+        padding: 140px 30px;
+    }
+    .link_p_3{
+        width: 70%;
+    }
+    .link_p_3 a{
+        text-align: center;
+        padding: 16px 12px;
+    }
+    .header h3{
+        text-align: center;
+    }
+
+    .container_p_3{
+        width: 100%;
+        padding: 59px 16px 74px 16px;
+    }
+    .center_box_text{
+        margin: 0px auto 0px auto;
+        text-align: center;
+        min-height: 80px;
+    }
+
+    /*.wrapper{*/
+    /*    height: auto;*/
+    /*}*/
+
+    .main_center{
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .container_one{
+        flex-wrap: wrap;
+        height: 100%;
+        position: relative;
+    }
+    .left_box{
+        width: 100%;
+    }
+
+    .right_box{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .bold_text span{
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .bold_text{
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .bakcell_logo{
+        width: 30%;
+        position: absolute;
+        top: 39px;
+        left: 29px;
+    }
+    .bakcell_logo img {
+        float: none;
+    }
+    .right_r>button{
+        float: left;
+        display: block;
+    }
+    .left_r>button{
+        float: right;
+        display: block;
+    }
+    .right_r{
+        display: flex;
+        justify-content: flex-start;
+
+    }
+    .left_r{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .header{
+        text-align: center;
+    }
+    .container_p_5{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .left_box_p_5{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .right_box_p_5{
+        width: 100%;
+        padding: 30px;
+    }
+
+    .button_5{
+        text-align: center;
+        padding: 16px 0px;
+        margin-left:0px;
+    }
+
+    .r_b_p_5_a{
+        padding-bottom: 20px;
+        margin-bottom: 0px;
+        text-align: left;
+    }
+
+    .b_t_5_box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .r_b_p_5_a p{
+        font-size: 24px;
+        line-height: 29px;
+    }
+    .wrapper{
+        height: 100%;
+        position: absolute;
+        display: table;
+    }
+
+
+
+
+
+
 }

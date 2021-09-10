@@ -11,6 +11,8 @@ export class CardsComponent implements OnInit {
 
   counter: number | any;
    items: any;
+   dispNone:boolean = true;
+   
   constructor( private data: GetQuestionsService , private router: Router) {
     this.data.ifCounter();
     this.counter = data.counter;
@@ -37,7 +39,7 @@ export class CardsComponent implements OnInit {
      
      if(this.counter < 11){
       this.sumCorAnswers(num);
-      this.router.navigate(['card-answer'], {state:this.items});
+        this.router.navigate(['card-answer'], {state:this.items});
      }
      return
    }
@@ -47,7 +49,7 @@ export class CardsComponent implements OnInit {
   }
 
   ngDoCheck(){
-  
+    
   }
 
 }
